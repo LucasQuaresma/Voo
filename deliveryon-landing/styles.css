@@ -805,24 +805,44 @@ section {
 }
 
 .store-button {
-  display: grid;
-  min-width: 172px;
-  min-height: 60px;
-  align-content: center;
-  border-radius: 8px;
-  padding: 10px 18px;
-  background: #101010;
-  color: #fff;
-  font-size: 18px;
+  display: inline-flex;
+  min-width: 220px;
+  min-height: 72px;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  border: 2px solid #101010;
+  border-radius: 18px;
+  padding: 12px 22px;
+  background: #fff;
+  color: #101010;
+  font-size: 30px;
   font-weight: 800;
   line-height: 1.1;
+  box-shadow: 0 14px 28px rgba(77, 24, 24, 0.16);
+  transition: transform 160ms ease, box-shadow 160ms ease;
 }
 
-.store-button span {
-  color: rgba(255, 255, 255, 0.68);
-  font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
+.store-button:hover,
+.store-button:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 34px rgba(77, 24, 24, 0.2);
+}
+
+.store-icon {
+  flex: 0 0 auto;
+  width: 42px;
+  height: 42px;
+}
+
+.apple-store-icon {
+  width: 46px;
+  height: 46px;
+}
+
+.store-label {
+  display: block;
+  white-space: nowrap;
 }
 
 .site-footer {
@@ -927,6 +947,13 @@ section {
   .button,
   .store-button {
     width: 100%;
+  }
+
+  .store-button {
+    justify-content: center;
+    min-width: 0;
+    min-height: 66px;
+    font-size: 25px;
   }
 
   .trust-badges li {
